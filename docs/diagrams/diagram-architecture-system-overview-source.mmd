@@ -1,0 +1,23 @@
+graph TD
+    User[User] -->|Opens| Browser[Web Browser Chrome/Edge]
+    
+    subgraph Browser Sandbox
+        App[Prompthive Zero App]
+        DAL[Data Access Layer]
+        
+        App -->|Reads/Writes| DAL
+    end
+    
+    subgraph Local File System
+        Root[Project Folder]
+        DB[database.json]
+        Uploads[uploads/ Folder]
+        
+        Root --> DB
+        Root --> Uploads
+    end
+    
+    DAL -->|File System Access API| Root
+    
+    classDef box fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    class App,DAL,DB,Uploads box

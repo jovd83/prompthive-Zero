@@ -1,0 +1,34 @@
+{
+    "version": 1,
+    "collections": [
+        {
+            "id": "col_001",
+            "name": "Frontend Development",
+            "parentId": null
+        },
+        {
+            "id": "col_002",
+            "name": "React Hooks",
+            "parentId": "col_001"
+        }
+    ],
+    "prompts": [
+        {
+            "id": "prompt_001",
+            "title": "React Component Generator",
+            "description": "Generates a clean functional component",
+            "body": "Create a React functional component named {{ComponentName}} that accepts props: {{Props}}. Ensure it is typed with TypeScript.",
+            "shortPrompt": "Make a React component",
+            "exampleOutput": "export const MyComponent = ({ title }: MyProps) => { ... }",
+            "expectedResult": "Should include cleanup function in useEffect if needed",
+            "tags": [
+                "react",
+                "frontend",
+                "typescript"
+            ],
+            "collectionId": "col_002",
+            "createdAt": "2024-01-01T12:00:00.000Z",
+            "updatedAt": "2024-01-01T12:00:00.000Z"
+        }
+    ]
+}

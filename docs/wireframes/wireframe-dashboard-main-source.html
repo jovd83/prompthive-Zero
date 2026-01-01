@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090b',
+                        card: '#18181b',
+                        sidebar: '#111113',
+                        primary: '#3b82f6',
+                        foreground: '#fafafa',
+                        muted: '#a1a1aa'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-foreground h-screen flex font-sans antialiased overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-sidebar border-r border-gray-800 flex flex-col">
+        <div class="p-4 border-b border-gray-800 flex items-center space-x-2">
+            <div class="w-6 h-6 bg-primary rounded-sm"></div>
+            <span class="font-bold text-lg">Prompthive</span>
+            <span class="bg-gray-800 text-xs px-1.5 py-0.5 rounded text-gray-400">Zero</span>
+        </div>
+
+        <div class="p-4 flex-1 overflow-y-auto">
+            <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Collections</div>
+
+            <nav class="space-y-1">
+                <a href="#"
+                    class="block px-2 py-2 bg-gray-800/50 text-white rounded-md text-sm font-medium border border-gray-700">
+                    All Prompts
+                </a>
+                <a href="#"
+                    class="block px-2 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-md text-sm transition-colors">
+                    Coding
+                </a>
+                <a href="#"
+                    class="block px-2 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-md text-sm transition-colors">
+                    Writing
+                </a>
+            </nav>
+
+            <button class="mt-4 w-full flex items-center text-xs text-gray-500 hover:text-white transition-colors">
+                <span class="mr-2 text-lg">+</span> Create Collection
+            </button>
+        </div>
+
+        <div class="p-4 border-t border-gray-800">
+            <div class="text-xs text-gray-500">Local Storage: C:\MyPrompts</div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full bg-background">
+        <!-- Header -->
+        <header
+            class="h-16 border-b border-gray-800 flex items-center justify-between px-6 bg-background/50 backdrop-blur-sm">
+            <h2 class="text-xl font-semibold">All Prompts</h2>
+
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search prompts..."
+                        class="bg-card border border-gray-800 rounded-full py-1.5 px-4 text-sm w-64 focus:outline-none focus:border-primary text-gray-300">
+                </div>
+                <button
+                    class="bg-primary hover:bg-blue-600 text-white text-sm font-medium py-1.5 px-4 rounded-full flex items-center shadow-lg shadow-blue-900/20">
+                    <span class="mr-1.5 text-lg leading-none">+</span> New Prompt
+                </button>
+            </div>
+        </header>
+
+        <!-- Grid -->
+        <div class="flex-1 overflow-y-auto p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-card border border-gray-800 rounded-lg p-5 hover:border-gray-700 transition duration-200 shadow-sm cursor-pointer group">
+                    <div class="flex justify-between items-start mb-3">
+                        <div
+                            class="w-8 h-8 rounded bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-xs font-bold">
+                            R</div>
+                        <button
+                            class="text-gray-600 hover:text-white opacity-0 group-hover:opacity-100 transition-opacity">•••</button>
+                    </div>
+                    <h3 class="font-semibold mb-1 truncate">React Component gen</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2 mb-4">Create a clean, reusable React component with
+                        TypeScript interfaces and Tailwind CSS...</p>
+
+                    <div class="flex flex-wrap gap-1">
+                        <span
+                            class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded border border-gray-700">#react</span>
+                        <span
+                            class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded border border-gray-700">#code</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-card border border-gray-800 rounded-lg p-5 hover:border-gray-700 transition duration-200 shadow-sm cursor-pointer group">
+                    <div class="flex justify-between items-start mb-3">
+                        <div
+                            class="w-8 h-8 rounded bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-xs font-bold">
+                            S</div>
+                        <button
+                            class="text-gray-600 hover:text-white opacity-0 group-hover:opacity-100 transition-opacity">•••</button>
+                    </div>
+                    <h3 class="font-semibold mb-1 truncate">SEO Blog Post</h3>
+                    <p class="text-xs text-gray-500 line-clamp-2 mb-4">Write a comprehensive blog post optimized for
+                        keywords...</p>
+
+                    <div class="flex flex-wrap gap-1">
+                        <span
+                            class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded border border-gray-700">#writing</span>
+                    </div>
+                </div>
+
+                <!-- Card Image -->
+                <div
+                    class="bg-card border border-gray-800 rounded-lg p-0 hover:border-gray-700 transition duration-200 shadow-sm cursor-pointer group overflow-hidden">
+                    <div class="h-32 bg-gray-800 relative">
+                        <!-- Placeholder for image attachment -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600">
+                            [Image Preview]
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold mb-1 truncate">UI Inspiration</h3>
+                        <p class="text-xs text-gray-500 line-clamp-2 mb-4">Analyze this UI and describe the color
+                            palette...</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="text-[10px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded border border-gray-700">#design</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

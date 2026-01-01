@@ -1,0 +1,30 @@
+erDiagram
+    DATABASE {
+        string version
+    }
+    
+    COLLECTION {
+        uuid id
+        string name
+    }
+    
+    PROMPT {
+        uuid id
+        string title
+        string description
+        string body
+        string[] tags
+        datetime createdAt
+        datetime updatedAt
+    }
+    
+    ATTACHMENT {
+        uuid id
+        string fileName
+        string mimeType
+    }
+    
+    DATABASE ||--o{ COLLECTION : contains
+    DATABASE ||--o{ PROMPT : contains
+    COLLECTION ||--o{ PROMPT : organizes
+    PROMPT ||--o{ ATTACHMENT : has
