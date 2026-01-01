@@ -5,11 +5,7 @@
 
   <p align="center">
     A ultra-lightweight, local-first prompt management tool designed for simplicity and privacy.
-    <br />
-    <br />
-    <a href="https://github.com/jovd83/prompthive-zero/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jovd83/prompthive-zero/issues">Request Feature</a>
+
   </p>
 </div>
 
@@ -24,11 +20,11 @@ Prompthive Zero is designed for users who want a portable, zero-setup solution. 
 | Feature | Prompthive Zero (This Repo) | [Prompthive (Standard)](https://github.com/jovd83/prompthive) |
 | :--- | :--- | :--- |
 | **Architecture** | Single HTML File | Full Web Application (Next.js, Database) |
-| **Storage** | Local JSON File (`database.json`) | PostgreSQL / Cloud Database |
+| **Storage** | Local JSON File (`database.json`) | SQLite Database with Prisma |
 | **Installation** | Save a file & open in browser | Docker / Node.js Server Setup |
 | **Privacy** | 100% Local Device | Self-Hosted or Cloud |
 | **Images** | ❌ Text Only | ✅ Full Image & Attachment Support |
-| **User Accounts** | ❌ Single User | ✅ Multi-User / Teams |
+| **User Accounts** | ❌ Single User | ✅ Multi-User / Teams (NextAuth) |
 
 ### ✅ Pros of Prompthive Zero
 *   **Zero Setup**: Just download the `.html` file and double-click to run.
@@ -46,7 +42,6 @@ Prompthive Zero is designed for users who want a portable, zero-setup solution. 
 *   **Image & Attachment Support**: Upload and manage prompts with rich media.
 *   **Cloud Sync**: Access your library from any device, anywhere.
 *   **Multi-User & Teams**: Collaborate with others, share collections, and manage permissions.
-*   **Advanced AI Features**: Direct integration with LLM APIs for testing prompts within the app.
 
 ---
 
